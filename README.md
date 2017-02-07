@@ -13,6 +13,7 @@
 	- 可以让alarm_1.js 以 bash script 启动/停止。启动后进入Linux background process 运行/停止其background process
 - trigger_rotation
 	- 动态生成 logrotate config 文件和生成logging 文件夹。。。。
+
 ## run the project
 - clone project: 
 	- $ git clone https://github.com/shareming7/logrolate.git
