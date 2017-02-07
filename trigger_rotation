@@ -6,5 +6,6 @@ logpath="$basedir/logging/alarm.log"
 tmpconfigpath=$basedir/logrotate.config
 mkdir -p $basedir/logging/
 cat $basedir/logrotate.template.config | sed s#LOGPATH_TO_BE_REPLACED#$logpath# > $tmpconfigpath 
+logrotate -v $tmpconfigpath -s $basedir/logrotate_api_daemon.status
 
 # rm -f $tmpconfigpath

@@ -8,7 +8,7 @@ function getCurrentTime(){
 	console.log(time);
 }
 function callLogrotate(){
-	const child = exec('logrotate -v' + ' ' + baseAbsPath + 'logrotate.config -s' + ' ' + baseAbsPath + 'logrotate.status',
+	const child = exec( baseAbsPath + 'trigger_rotation ',
 		{ encoding: 'utf8',
 		timeout: 0,
 		maxBuffer: 200*1024,
