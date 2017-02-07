@@ -6,6 +6,7 @@
 - 尝试手动使用logrotate处理logging/alarm.log。
 - 尝试用"alarm_1.js"周期性调用logrotate处理logging/alarm.log。建议阅读nodejs的"child_process"文档，学习如何用nodejs调用bash shell命令 https://nodejs.org/docs/v0.4.6/api/child_processes.html#child_process.exec
 
+
 ## run the project
 - clone project: 
 	- $ git clone https://github.com/shareming7/logrolate.git

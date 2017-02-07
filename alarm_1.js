@@ -1,4 +1,4 @@
-const baseAbsPath = __dirname ;
+const baseAbsPath = __dirname + '/' ;
 const express = require('express');
 const app = express();
 const util = require('util');
@@ -6,7 +6,9 @@ const exec = require('child_process').exec;
 function getCurrentTime(){
 	const time = new Date();
 	console.log(time);
-	const child = exec('logrotate -v' + ' ' + baseAbsPath + '/logrotate.config -s' + ' ' + baseAbsPath + '/logrotate.status',
+}
+function callLogrotate(){
+	const child = exec('logrotate -v' + ' ' + baseAbsPath + 'logrotate.config -s' + ' ' + baseAbsPath + 'logrotate.status',
 		{ encoding: 'utf8',
 		timeout: 0,
 		maxBuffer: 200*1024,
@@ -22,5 +24,5 @@ function getCurrentTime(){
 		}
 	)
 }
-const myInterval = setInterval(getCurrentTime,1000);
-
+const timeInterval = setInterval(getCurrentTime,10000);
+const logInterval = setInterval(callLogrotate,10000)
