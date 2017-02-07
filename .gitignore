@@ -1,0 +1,13 @@
+# config files
+*.status
+
+# temporary config file for logrotate
+logrotate.config 
+
+# local logs
+*.log
+*.log.*
+
+# node
+node_modules/
+

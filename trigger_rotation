@@ -1,0 +1,10 @@
+#!/bin/bash
+
+basedir=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
+
+logpath="$basedir/logging/alarm.log"
+tmpconfigpath=$basedir/logrotate.config
+mkdir -p $basedir/logging/
+cat $basedir/logrotate.template.config | sed s#LOGPATH_TO_BE_REPLACED#$logpath# > $tmpconfigpath 
+
+# rm -f $tmpconfigpath

@@ -1,0 +1,5 @@
+#!/bin/bash
+
+basedir=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
+
+NODE_ENV= node $basedir/alarm_1.js >$basedir/logging/alarm.log 2>&1 &
