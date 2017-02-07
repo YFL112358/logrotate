@@ -24,6 +24,6 @@
 - run the alarm_1.js
 	- $ ./start_node_alarm_1
 - stop the project
-	-$ ./stop_node_alarm_1
+	- $ ./stop_node_alarm_1
 
 
