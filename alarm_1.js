@@ -1,6 +1,4 @@
 const baseAbsPath = __dirname + '/' ;
-const express = require('express');
-const app = express();
 const util = require('util');
 const exec = require('child_process').exec;
 function getCurrentTime(){
